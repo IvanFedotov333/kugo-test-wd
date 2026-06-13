@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,11 +48,131 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__top">
-        <div class="container"></div>
+      <!-- Верхняя полоса -->
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top__inner">
+            <nav class="header-top__nav">
+              <ul class="header-top__links">
+                <li class="header-top__item">
+                  <a href="#" class="header-top__link">Сервис</a>
+                </li>
+                <li class="header-top__item">
+                  <a href="#" class="header-top__link">Сотрудничество</a>
+                </li>
+                <li class="header-top__item">
+                  <a href="#" class="header-top__link">Заказать звонок</a>
+                </li>
+              </ul>
+              <!-- Соцсети внутри общего контейнера -->
+              <div class="header-top__socials">
+                <a href="#" class="header-top__social" aria-label="Viber">
+                  <svg width="12" height="12">
+                    <use href="img/sprite.svg#viber" />
+                  </svg>
+                </a>
+                <a href="#" class="header-top__social" aria-label="Whatsapp">
+                  <svg width="12" height="12">
+                    <use href="img/sprite.svg#whatsapp" />
+                  </svg>
+                </a>
+                <a href="#" class="header-top__social" aria-label="Telegram">
+                  <svg width="12" height="12">
+                    <use href="img/sprite.svg#telegram" />
+                  </svg>
+                </a>
+              </div>
+            </nav>
+
+            <div class="header-top__contacts">
+              <a href="tel:+78005055461" class="header-top__phone"
+                >+7 (800) 505-54-61</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="header__bottom">
-        <div class="container"></div>
+
+      <!-- Нижняя полоса (основной навбар) -->
+      <div class="header-bottom">
+        <div class="container">
+          <div class="header-bottom__inner">
+            <a href="#" class="header-bottom__logo">Kugoo</a>
+            <button class="header-bottom__catalog-btn" type="button">
+              <svg width="16" height="16" viewBox="0 0 16 16">
+                <rect y="2" width="16" height="2" rx="1" fill="currentColor" />
+                <rect y="7" width="16" height="2" rx="1" fill="currentColor" />
+                <rect
+                  x="8"
+                  y="12"
+                  width="8"
+                  height="2"
+                  rx="1"
+                  fill="currentColor"
+                />
+              </svg>
+              Каталог
+            </button>
+            <form class="header-bottom__search" action="#" method="get">
+              <input
+                class="header-bottom__search-input"
+                type="text"
+                placeholder="Искать самокат KUGO"
+              />
+              <button
+                class="header-bottom__search-btn"
+                type="submit"
+                aria-label="Поиск"
+              >
+                <svg width="16" height="16" viewBox="0 0 16 16">
+                  <circle
+                    cx="7.5"
+                    cy="7.5"
+                    r="6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="11.5"
+                    y1="11.5"
+                    x2="15"
+                    y2="15"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </form>
+            <div class="header-bottom__actions">
+              <a
+                href="#"
+                class="header-bottom__action-link"
+                aria-label="Сравнение"
+              >
+                <svg width="20" height="20">
+                  <use href="img/sprite.svg#compare" />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="header-bottom__action-link"
+                aria-label="Избранное"
+              >
+                <svg width="20" height="20">
+                  <use href="img/sprite.svg#like" />
+                </svg>
+              </a>
+              <a href="#" class="header-bottom__cart-link" aria-label="Корзина">
+                <svg width="20" height="20">
+                  <use href="img/sprite.svg#cargo" />
+                </svg>
+                <span class="header-bottom__cart-text">Корзина</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 

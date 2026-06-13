@@ -12,7 +12,7 @@ body {
 /* ===== Подключение шрифтов (локально) ===== */
 @font-face {
   font-family: "Jost";
-  src: url("../fonts/jost-v51-cyrillic_latin-regular.woff2") format("woff2");
+  src: url("../fonts/jost-v20-cyrillic_latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -51,9 +51,203 @@ body {
 }
 
 .container {
-  max-width: 90rem; /* 1440px */
+  max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+:root {
+  --color-black: #282739;
+  --color-gray-600: #5d6c7b;
+  --color-accent: #6f73ee;
+  --color-white: #ffffff;
+  --color-border: #ecf3ff;
+}
+
+.header-top {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 12px;
+  padding: 11px 0;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-top {
+    display: block;
+  }
+  .header-top__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-top__nav {
+    display: flex;
+    font-display: space-between;
+    gap: 30px;
+  }
+  .header-top__links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+  }
+  .header-top__link {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    color: var(--color-gray-600);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .header-top__link:hover {
+    color: var(--color-black);
+  }
+  .header-top__contacts {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .header-top__socials {
+    display: flex;
+    gap: 10px;
+  }
+  .header-top__phone {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    color: var(--color-black);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+}
+
+.header-bottom {
+  background-color: var(--color-white);
+  padding: 27px 0;
+}
+
+.header-bottom__inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-bottom__logo {
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--color-black);
+  text-decoration: none;
+  margin-right: 2.1875rem;
+}
+
+.header-bottom__catalog-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  order: 1;
+}
+
+.header-bottom__search,
+.header-bottom__actions {
+  display: none;
+}
+
+.header-bottom__cart-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--color-black);
+  position: relative;
+  order: 2;
+}
+
+.header-bottom__cart-text {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.header-bottom__cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Планшеты и десктопы: показываем поиск и иконки */
+@media (min-width: 768px) {
+  .header-bottom__search {
+    display: flex;
+    flex: 1;
+    max-width: auto;
+    position: relative;
+    order: 1;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .header-bottom__search-input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1.5px solid var(--color-accent);
+    border-radius: 5px 0 0 5px;
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    color: var(--color-gray-600);
+  }
+  .header-bottom__search-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: var(--color-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-bottom__actions {
+    display: flex;
+    gap: 25px;
+    order: 1;
+    margin-left: 2.9375rem;
+  }
+  .header-bottom__action-link {
+    color: var(--color-black);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .header-bottom__action-link:hover {
+    color: var(--color-accent);
+  }
+  .header-bottom__cart-link {
+    order: 2;
+  }
 }
