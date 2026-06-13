@@ -65,6 +65,40 @@ body {
   --color-white: #ffffff;
   --color-border: #ecf3ff;
 }
+.features {
+  overflow: hidden;
+}
+.features__content-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.features__img-wrapper {
+  position: relative; 
+  flex-shrink: 0;
+}
+
+.features__img-spacer {
+  width: 32.1875rem; /* Такая же ширина, как у картинки */
+  height: auto; /* Не занимает места по высоте */
+  visibility: hidden; /* Невидим */
+}
+
+.features__img-wrapper--right .features__content-img {
+  position: absolute;
+  top: 0;
+  right: -37%;
+
+  max-width: 32.1875rem;
+  height: auto;
+  border-radius: 10px;
+}
+
+.features__content-img--left {
+  margin-left: -12rem;
+}
 .header-top {
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-border);
@@ -139,6 +173,16 @@ body {
   align-items: center;
   justify-content: center;
 }
+.section-title {
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 2.1875rem;
+  line-height: 1.3;
+  color: var(--color-black);
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 38.25rem;
+}
 .store-info {
   padding-bottom: 3rem;
 }
@@ -179,6 +223,35 @@ body {
 }
 
 @media (min-width: 768px) {
+  .store-info__title {
+    color: var(--color-white);
+  }
+  .features__content-img {
+    max-width: 29rem;
+  }
+  .features__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #282739;
+    max-width: 40.3125rem;
+  }
+  .features__list {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+  }
+  .features__list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0.9rem;
+  }
+
+  .features__content-wrapper {
+    display: flex;
+    gap: 5.9375rem;
+    padding-top: 4.5rem;
+  }
   .header-top {
     display: block;
   }
@@ -285,14 +358,6 @@ body {
     margin: 0 1.875rem;
   }
 
-  .store-info__title {
-    font-weight: 600;
-    font-size: 2.1875rem;
-    line-height: 160%;
-    text-transform: uppercase;
-    max-width: 38.25rem;
-    margin-bottom: 0;
-  }
   .store-info__subtitle {
     font-weight: 400;
     font-size: 1.6rem;
