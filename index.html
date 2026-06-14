@@ -315,7 +315,64 @@
 
       <section class="catalog">
         <div class="container"></div>
-        <div class="catalog__grid"></div>
+        <div class="catalog__content-wrapper">
+          <h1 class="section-title catalog__title">
+            Сейчас для тест-драйва и обучения доступны следующие модели
+          </h1>
+          <div class="catalog__grid">
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="img/segway.webp" alt="Kugoo Kirin M4" />
+                <span class="product-card__badge product-card__badge--hit">Хит</span>
+                <button
+                  class="product-card__icon-btn product-card__icon-btn--compare"
+                  aria-label="Сравнение">
+                  <svg width="20" height="20">
+                    <use href="img/sprite.svg#compare"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Kugoo Kirin M4</h3>
+                <div class="product-card__specs">
+                  <span class="product-card__spec"
+                    ><svg width="18" height="18">
+                      <use href="img/sprite.svg#battery"/></svg>2000 mAh</span>
+                  <span class="product-card__spec">
+                    <svg width="18" height="18">
+                      <use href="img/sprite.svg#speed"/></svg>60 км/ч</span>
+                  <span class="product-card__spec"><svg width="18" height="18">
+                      <use href="img/sprite.svg#power"/></svg>1,2 л.с.</span>
+                  <span class="product-card__spec"><svg width="18" height="18">
+                      <use href="img/sprite.svg#timer" /></svg>5 часов</span>
+                </div>
+                <div class="product-card__prices">
+                  <span class="product-card__old-price">39 900 ₽</span>
+                  <div class="product-card__prices-right">
+                    <span class="product-card__new-price">29 900 ₽</span>
+                    <button
+                      class="product-card__icon-btn"
+                      aria-label="В избранное">
+                      <svg width="20" height="20">
+                        <use href="img/sprite.svg#heart"/>
+                      </svg>
+                    </button>
+                    <button
+                      class="product-card__icon-btn"
+                      aria-label="В корзину">
+                      <svg width="20" height="20">
+                        <use href="img/sprite.svg#cargolight"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <button class="product-card__cta-btn">
+                  Записаться на тест-драйв
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section class="cta">

@@ -65,7 +65,25 @@ body {
   --color-white: #ffffff;
   --color-border: #ecf3ff;
 }
-
+.icon--badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+}
+.catalog__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.catalog__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .features__content-img {
   display: block;
   width: 100%;
@@ -74,18 +92,16 @@ body {
 }
 .features__content-img--right,
 .features__content-img--left {
-  position: static; 
+  position: static;
   width: 100%;
   max-width: 100%;
   margin: 0;
 }
 
 .features__content-wrapper {
-  flex-direction: column;
-}
-.features__content-wrapper {
   position: relative;
 }
+
 .header-top {
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-border);
@@ -160,6 +176,160 @@ body {
   align-items: center;
   justify-content: center;
 }
+.product-card {
+  max-width: 15.9375rem;
+}
+/* Карточка товара */
+.product-card {
+  border: 1.5px solid #EAEBED;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Изображение и элементы на нём */
+.product-card__image {
+  position: relative;
+  background-color: #F0F1F5;
+}
+
+.product-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.product-card__badge--hit {
+  background-color: #EE685F;
+}
+
+.product-card__icon-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.product-card__icon-btn--compare {
+  top: 10px;
+  right: 10px;
+}
+
+/* Тело карточки */
+.product-card__body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.product-card__title {
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #282739;
+  margin: 0;
+}
+
+/* Сетка характеристик в два столбца */
+.product-card__specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+}
+
+.product-card__spec {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #5D6C7B;
+}
+
+/* Цены */
+.product-card__prices {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.product-card__old-price {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #5D6C7B;
+  text-decoration: line-through;
+}
+
+.product-card__prices-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-card__new-price {
+  font-family: 'Jost', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #282739;
+}
+
+/* Кнопки лайк/корзина в строке с ценой (маленькие, без фона) */
+.product-card__prices .product-card__icon-btn {
+  position: static;
+  background: none;
+  backdrop-filter: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  color: #6F73EE;
+}
+
+/* Большая кнопка */
+.product-card__cta-btn {
+  background-color: #6F73EE;
+  color: #FFFFFF;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.product-card__cta-btn:hover {
+  background-color: #5A5FD8;
+}
 .section-title {
   font-family: "Jost", sans-serif;
   font-weight: 600;
@@ -168,7 +338,6 @@ body {
   color: var(--color-black);
   text-transform: uppercase;
   margin: 0;
-  max-width: 38.25rem;
 }
 .store-info {
   padding-bottom: 3rem;
@@ -210,6 +379,11 @@ body {
 }
 
 @media (min-width: 768px) {
+  .catalog__title {
+    max-width: 45.75rem;
+    text-align: center;
+    margin-bottom: 3.125rem;
+  }
   .store-info__title {
     color: var(--color-white);
   }
