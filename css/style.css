@@ -65,39 +65,26 @@ body {
   --color-white: #ffffff;
   --color-border: #ecf3ff;
 }
-.features {
-  overflow: hidden;
-}
+
 .features__content-img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
-
-.features__img-wrapper {
-  position: relative; 
-  flex-shrink: 0;
-}
-
-.features__img-spacer {
-  width: 32.1875rem; /* Такая же ширина, как у картинки */
-  height: auto; /* Не занимает места по высоте */
-  visibility: hidden; /* Невидим */
-}
-
-.features__img-wrapper--right .features__content-img {
-  position: absolute;
-  top: 0;
-  right: -37%;
-
-  max-width: 32.1875rem;
-  height: auto;
-  border-radius: 10px;
-}
-
+.features__content-img--right,
 .features__content-img--left {
-  margin-left: -12rem;
+  position: static; 
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.features__content-wrapper {
+  flex-direction: column;
+}
+.features__content-wrapper {
+  position: relative;
 }
 .header-top {
   background-color: var(--color-white);
@@ -226,8 +213,24 @@ body {
   .store-info__title {
     color: var(--color-white);
   }
+  .features__content-img--right ~ .features__text-wrapper {
+    margin-right: auto;
+    max-width: 55%;
+  }
+  .features__content-img--left ~ .features__text-wrapper {
+    margin-left: auto;
+    max-width: 55%;
+  }
   .features__content-img {
     max-width: 29rem;
+  }
+  .features__content-img--right {
+    position: absolute;
+    right: -12rem;
+  }
+  .features__content-img--left {
+    position: absolute;
+    left: -12rem;
   }
   .features__title {
     font-weight: 600;
@@ -251,6 +254,7 @@ body {
     display: flex;
     gap: 5.9375rem;
     padding-top: 4.5rem;
+    margin-bottom: 6.25rem;
   }
   .header-top {
     display: block;
