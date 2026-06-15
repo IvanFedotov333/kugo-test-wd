@@ -78,11 +78,87 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 7.125rem;
 }
 .catalog__grid {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+.cta {
+  background-color: #f4f7fb;
+  border-radius: 10px;
+  margin: 0 1.875rem;
+  z-index: 1;
+  padding: 5.5rem 8.4375rem 0;
+}
+.cta__image {
+  display: none;
+}
+.cta .container {
+  position: relative;
+}
+.cta__form-bottom {
+  margin-bottom: 4.875rem;
+  max-width: 20.9375rem;
+  margin-top: 1.25rem;
+}
+
+.cta__title {
+  max-width: 39.6875rem;
+  margin-bottom: 2.5rem;
+}
+.cta__subtitle {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #282739;
+  margin-bottom: 1.25rem;
+}
+
+.cta__form-top {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cta__input {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+}
+
+.cta__btn {
+  background-color: #6f73ee;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.9rem 1.5rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cta__form-bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #5d6c7b;
+}
+
+.cta__agree-checkbox {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.cta__agree-label a {
+  color: #6f73ee;
+  text-decoration: underline;
 }
 .features__content-img {
   display: block;
@@ -97,11 +173,9 @@ body {
   max-width: 100%;
   margin: 0;
 }
-
 .features__content-wrapper {
   position: relative;
 }
-
 .header-top {
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-border);
@@ -386,6 +460,21 @@ body {
     max-width: 45.75rem;
     text-align: center;
     margin-bottom: 3.125rem;
+  }
+  .cta__image {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+  }
+  .cta__form-top {
+    width: 85%;
+  }
+  .cta__wrapper {
+    display: flex;
   }
   .store-info__title {
     color: var(--color-white);
