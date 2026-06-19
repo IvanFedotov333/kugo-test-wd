@@ -3,6 +3,7 @@
 }
 html {
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Jost", "Roboto", sans-serif;
@@ -468,6 +469,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   order: 1;
+  text-decoration: none;
 }
 .header-bottom__search,
 .header-bottom__actions {
@@ -1138,6 +1140,7 @@ body {
   }
   .footer__logo {
     align-self: center;
+    text-decoration: none;
   }
   .footer__socials {
     flex-direction: row;
@@ -1205,4 +1208,15 @@ body {
     left: -12rem;
     top: 4rem;
   }
+}
+
+.subscribe-success {
+  color: #282739;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 5px;
+  align-self: center;
 }
