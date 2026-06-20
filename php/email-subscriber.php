@@ -12,7 +12,7 @@ if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 $to = 'ivan_fedotov_2013@inbox.ru';
 $subject = 'Новая подписка с сайта Kugoo';
 $message = "Новый подписчик!\n\nEmail: {$email}\nДата: " . date('d.m.Y H:i:s');
-$headers = 'From: no-reply@kugoo-test.ru\r\n';
+$headers = "From: no-reply@kugoo-test.ru\r\n";
 $headers .= "Reply-To: {$email}\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 

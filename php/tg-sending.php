@@ -13,7 +13,7 @@ $token = '8852821334:AAFcLnrXPq5JLvrulD8xasyCo4Jr515cXO8';
 $chat_id = '1638501939';
 
 $text = "🎉 Новая заявка на сайте Kugoo!\n";
-$text .= "✨ Телефон: " . $phone . '\n';
+$text .= "✨ Телефон: " . $phone . "\n";
 $text .= "🎁 Дата: " . date("d.m.Y H:i:s");
 
 $url = "https://api.telegram.org/bot{$token}/sendMessage";

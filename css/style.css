@@ -123,6 +123,7 @@ body {
   gap: 0.5rem;
   font-size: 0.75rem;
   color: #5d6c7b;
+  padding-bottom: 5rem;
 }
 
 .cta__title {
@@ -162,7 +163,6 @@ body {
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
-  white-space: wrap;
 }
 
 .cta__agree-checkbox {
@@ -624,6 +624,40 @@ body {
 .modal.is-open .modal__window {
   transform: translateY(0);
 }
+.modal__success {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.modal__success-title {
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: #282739;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+.modal__success-text {
+  font-size: 1rem;
+  color: #282739;
+  margin: 0 0 2rem;
+  line-height: 1.4;
+}
+.modal__success-btn {
+  display: inline-block;
+  background: #6f73ee;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.9rem 2.5rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.modal__success-btn:hover {
+  background: #5a5fd8;
+}
 .product-card {
   max-width: 100%;
   align-self: center;
@@ -961,7 +995,7 @@ body {
   }
   .header-top__nav {
     display: flex;
-    font-display: space-between;
+    justify-content: space-between;
     gap: 30px;
   }
   .header-top__links {
@@ -1163,9 +1197,7 @@ body {
     height: auto;
     bottom: 0;
   }
-  .cta__form-bottom {
-    padding-bottom: 5rem;
-  }
+
   .cta__form-top {
     flex-direction: row;
   }
@@ -1219,4 +1251,27 @@ body {
   background: #fff;
   border-radius: 5px;
   align-self: center;
+}
+
+@media (max-width: 991px) {
+  .product-card__cta-btn:hover,
+  .modal__submit-btn:hover,
+  .footer__subscribe-btn:hover {
+    background-color: initial;
+    color: inherit;
+  }
+
+  .header-top__link:hover {
+    color: var(--color-black);
+  }
+
+  .footer__list a:hover {
+    color: #5d6c7b;
+  }
+
+  .cta__btn:hover,
+  .store-info__btn:hover {
+    background-color: inherit;
+    color: inherit;
+  }
 }
