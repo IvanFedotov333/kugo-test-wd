@@ -4,7 +4,7 @@
 Современный стек, модальное окно, формы обратной связи с реальной отправкой.
 
 ## 🔗 Живой сайт
-[https://fedotov-ivan.ru/kugoo-test/](https://fedotov-ivan.ru/kugoo-test/)
+[https://fedotov-ivan.ru/kugoo-test/](https://ivanfedotov333.github.io/kugo-test-wd/)
 
 ## 🛠️ Ключевые особенности
 - **Mobile-first адаптив** (от 320px до 1920px)
